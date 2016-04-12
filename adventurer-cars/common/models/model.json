@@ -1,0 +1,30 @@
+{
+  "name": "model",
+  "plural": "models",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "trims": {
+      "type": "hasMany",
+      "model": "trim",
+      "foreignKey": "model_id"
+    },
+    "colors": {
+      "type": "hasMany",
+      "model": "color",
+      "foreignKey": "model_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

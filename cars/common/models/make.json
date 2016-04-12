@@ -1,0 +1,25 @@
+{
+  "name": "make",
+  "plural": "makes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "models": {
+      "type": "hasMany",
+      "model": "model",
+      "foreignKey": "make_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
